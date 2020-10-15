@@ -40,3 +40,10 @@ def get_unchecked_function_names(all_function_names):
         for def_path in all_function_names
         if "unchecked" in def_path.split('::')[-1]
     ])
+
+def get_unguarded_function_names(all_function_names):
+    return set([
+        def_path
+        for def_path in all_function_names
+        if "unguarded" in def_path.split('::')[-1]
+    ])
